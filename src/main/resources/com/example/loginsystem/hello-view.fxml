@@ -7,9 +7,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.PasswordField?>
 
 
-<BorderPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx">
+<BorderPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/javafx" fx:controller="com.example.loginsystem.LoginController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login System">
@@ -18,17 +19,17 @@
            </font>
         </Text>
 
-        <TextField alignment="CENTER" prefHeight="25.0" prefWidth="308.0" promptText="Enter username" VBox.vgrow="NEVER">
+        <TextField fx:id="usernameField" alignment="CENTER" prefHeight="25.0" prefWidth="308.0" promptText="Enter username" VBox.vgrow="NEVER">
            <VBox.margin>
               <Insets left="100.0" right="100.0" top="10.0" />
            </VBox.margin>
         </TextField>
-        <TextField alignment="CENTER" prefHeight="25.0" prefWidth="308.0" promptText="Enter password">
+        <PasswordField fx:id="passwordField" alignment="CENTER" prefHeight="25.0" prefWidth="308.0" promptText="Enter password">
            <VBox.margin>
               <Insets left="100.0" right="100.0" top="10.0" />
            </VBox.margin>
-        </TextField>
-        <Button prefWidth="300.0" text="Login" textAlignment="CENTER">
+        </PasswordField>
+        <Button prefWidth="300.0" text="Login" textAlignment="CENTER" onAction="#login">
            <VBox.margin>
               <Insets top="10.0" />
            </VBox.margin>
